@@ -9,21 +9,20 @@ namespace UserRegistration
     //------Class------//
     public class Registration
     {
-        
-        public static string first = "^[A-Z][A-Z a-z]{3,}$";
-        public string FirstName;
+        public static string last = "^[A-Z][A-Z a-z]{3,}$";
+        public string LastName;
 
         //-------Constructor----------//
-        public Registration(string firstName) 
+        public Registration(string lastName) 
         {
             //-----Initializing---//
-            this.FirstName = firstName;
+            this.LastName = lastName;
         }
         //-------Method Starts-------//
-        public string ValidatingFirstName()
+        public string ValidatingLastName()
         {
 
-            if (Regex.IsMatch(FirstName, first))
+            if (Regex.IsMatch(LastName, last))
             {
                 return "valid";
             }
