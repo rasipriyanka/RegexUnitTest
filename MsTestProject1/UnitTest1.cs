@@ -10,11 +10,11 @@ namespace MsTestProject1
         public void TestMethod1()
         {
             ///Arrange
-            string upper = "RasiPriyanka";
+            string specialchar = "RasiPriyanka@12";
             string expected = "valid";
-            Registration register = new Registration(upper);
+            Registration register = new Registration(specialchar);
             ///Act
-            string actual = register.ValidatingUpperCase();
+            string actual = register.Validatingspecialchar();
             ///Assert
             Assert.AreEqual(expected, actual);
         }

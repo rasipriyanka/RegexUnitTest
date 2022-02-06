@@ -9,20 +9,20 @@ namespace UserRegistration
     //------Class------//
     public class Registration
     {
-        public static string Pattern = @"^(?=.*[A-Z])[A-Za-z0-9]{8,}$";
-        public string UpperCase;
+        public static string Pattern = @"^(?=.*[@$!%*#?&])[a-zA-Z0-9@$!%*#?&]{8,}$";
+        public string SpecialCharacter;
 
         //-------Constructor----------//
-        public Registration(string upper) 
+        public Registration(string specialchar) 
         {
             //-----Initializing---//
-            this.UpperCase = upper;
+            this.SpecialCharacter = specialchar;
         }
         //-------Method Starts-------//
-        public string ValidatingUpperCase()
+        public string Validatingspecialchar()
         {
 
-            if (Regex.IsMatch(UpperCase, Pattern))
+            if (Regex.IsMatch(SpecialCharacter, Pattern))
             {
                 return "valid";
             }

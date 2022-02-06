@@ -7,8 +7,8 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Regex!");
-            Registration register = new Registration("RasiPriyanka");
-            register.ValidatingUpperCase();
+            Registration register = new Registration("RasiPriyanka@12");
+            register.Validatingspecialchar();
         }
     }
 }
