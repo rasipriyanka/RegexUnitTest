@@ -10,11 +10,11 @@ namespace MsTestProject1
         public void TestMethod1()
         {
             ///Arrange
-            string email = "rasi.priyanka@bridgelabz.com";
+            string mobile = "+91 8975675345";
             string expected = "valid";
-            Registration register = new Registration(email);
+            Registration register = new Registration(mobile);
             ///Act
-            string actual = register.ValidatingEmail();
+            string actual = register.ValidatingMobileNum();
             ///Assert
             Assert.AreEqual(expected, actual);
         }

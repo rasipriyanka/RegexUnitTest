@@ -9,20 +9,20 @@ namespace UserRegistration
     //------Class------//
     public class Registration
     {
-        public static string emailaddress= @"^([A-Za-z0-9]*\.[A-Za-z0-9]*)@([A-Za-z0-9]*)((\.(\w){2,3})+)$";
-        public string Email;
+        public static string MobileNum = @"^([\+][0-9]{2}\s*[0-9]{10})$";
+        public string Mobile;
 
         //-------Constructor----------//
-        public Registration(string email) 
+        public Registration(string mobile) 
         {
             //-----Initializing---//
-            this.Email = email;
+            this.Mobile = mobile;
         }
         //-------Method Starts-------//
-        public string ValidatingEmail()
+        public string ValidatingMobileNum()
         {
 
-            if (Regex.IsMatch(Email, emailaddress))
+            if (Regex.IsMatch(Mobile, MobileNum))
             {
                 return "valid";
             }
