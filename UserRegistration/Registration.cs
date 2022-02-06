@@ -9,20 +9,20 @@ namespace UserRegistration
     //------Class------//
     public class Registration
     {
-        public static string MobileNum = @"^([\+][0-9]{2}\s*[0-9]{10})$";
-        public string Mobile;
+        public static string Pattern = @"^[A-Za-z0-9]{8,}$";
+        public string Password;
 
         //-------Constructor----------//
-        public Registration(string mobile) 
+        public Registration(string pwd) 
         {
             //-----Initializing---//
-            this.Mobile = mobile;
+            this.Password = pwd;
         }
         //-------Method Starts-------//
-        public string ValidatingMobileNum()
+        public string ValidatingPassword()
         {
 
-            if (Regex.IsMatch(Mobile, MobileNum))
+            if (Regex.IsMatch(Password, Pattern))
             {
                 return "valid";
             }

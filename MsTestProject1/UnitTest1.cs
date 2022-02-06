@@ -10,11 +10,11 @@ namespace MsTestProject1
         public void TestMethod1()
         {
             ///Arrange
-            string mobile = "+91 8975675345";
+            string pwd = "rasipendela";
             string expected = "valid";
-            Registration register = new Registration(mobile);
+            Registration register = new Registration(pwd);
             ///Act
-            string actual = register.ValidatingMobileNum();
+            string actual = register.ValidatingPassword();
             ///Assert
             Assert.AreEqual(expected, actual);
         }
