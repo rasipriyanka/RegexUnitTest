@@ -9,20 +9,20 @@ namespace UserRegistration
     //------Class------//
     public class Registration
     {
-        public static string last = "^[A-Z][A-Z a-z]{3,}$";
-        public string LastName;
+        public static string emailaddress= @"^([A-Za-z0-9]*\.[A-Za-z0-9]*)@([A-Za-z0-9]*)((\.(\w){2,3})+)$";
+        public string Email;
 
         //-------Constructor----------//
-        public Registration(string lastName) 
+        public Registration(string email) 
         {
             //-----Initializing---//
-            this.LastName = lastName;
+            this.Email = email;
         }
         //-------Method Starts-------//
-        public string ValidatingLastName()
+        public string ValidatingEmail()
         {
 
-            if (Regex.IsMatch(LastName, last))
+            if (Regex.IsMatch(Email, emailaddress))
             {
                 return "valid";
             }

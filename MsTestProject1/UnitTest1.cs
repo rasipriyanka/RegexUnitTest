@@ -10,11 +10,11 @@ namespace MsTestProject1
         public void TestMethod1()
         {
             ///Arrange
-            string lastName = "Priyanka";
+            string email = "rasi.priyanka@bridgelabz.com";
             string expected = "valid";
-            Registration register = new Registration(lastName);
+            Registration register = new Registration(email);
             ///Act
-            string actual = register.ValidatingLastName();
+            string actual = register.ValidatingEmail();
             ///Assert
             Assert.AreEqual(expected, actual);
         }
